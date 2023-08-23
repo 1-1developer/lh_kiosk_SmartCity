@@ -4,5 +4,5 @@
     <ui:Template name="ProcessScreen" src="project://database/Assets/UI/ProcessScreen.uxml?fileID=9197481963319205126&amp;guid=2cb63a2157eb1bf45a4166dbd47d1179&amp;type=3#ProcessScreen" />
     <ui:Instance template="MainScreen" name="MainScreen" style="position: absolute; left: 0; top: 0;" />
     <ui:Instance template="SmartCityScreen" name="SmartCityScreen" style="position: absolute; display: none;" />
-    <ui:Instance template="ProcessScreen" name="ProcessScreen" style="position: absolute; display: none;" />
+    <ui:Instance template="ProcessScreen" name="ProcessScreen" style="position: absolute; display: none; overflow: visible;" />
 </ui:UXML>
