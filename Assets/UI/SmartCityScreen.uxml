@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Background" style="background-image: resource(&apos;SmartCityScreen/SCS_Background&apos;); width: 1920px; height: 1080px; position: absolute; left: 0; top: 0;">
+        <ui:Button display-tooltip-when-elided="true" name="Button00" style="opacity: 1; background-image: resource(&apos;SmartCityScreen/SCS_Button0&apos;); width: 383px; height: 53px; position: absolute; background-color: rgba(88, 88, 88, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; -unity-background-scale-mode: scale-to-fit; left: 774px; top: 984px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+        <ui:Button display-tooltip-when-elided="true" name="Button10" style="background-image: resource(&apos;SmartCityScreen/SCS_Back&apos;); width: 86px; height: 86px; position: absolute; background-color: rgba(88, 88, 88, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; -unity-background-scale-mode: scale-to-fit; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; left: 1801px; top: 497px;" />
+    </ui:VisualElement>
+</ui:UXML>

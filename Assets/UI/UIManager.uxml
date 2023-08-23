@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="MainScreen" src="project://database/Assets/UI/MainScreen.uxml?fileID=9197481963319205126&amp;guid=99d64c2927dd5f64fa4d04c1504262ec&amp;type=3#MainScreen" />
+    <ui:Template name="SmartCityScreen" src="project://database/Assets/UI/SmartCityScreen.uxml?fileID=9197481963319205126&amp;guid=2467c9474ec0df4498a7935716e9bb09&amp;type=3#SmartCityScreen" />
+    <ui:Template name="ProcessScreen" src="project://database/Assets/UI/ProcessScreen.uxml?fileID=9197481963319205126&amp;guid=2cb63a2157eb1bf45a4166dbd47d1179&amp;type=3#ProcessScreen" />
+    <ui:Instance template="MainScreen" name="MainScreen" style="position: absolute; left: 0; top: 0;" />
+    <ui:Instance template="SmartCityScreen" name="SmartCityScreen" style="position: absolute; display: none;" />
+    <ui:Instance template="ProcessScreen" name="ProcessScreen" style="position: absolute; display: none;" />
+</ui:UXML>
