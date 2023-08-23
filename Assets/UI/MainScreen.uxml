@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="background-image: resource(&apos;MainScreen/MS_popup1&apos;); width: 1439px; height: 465px; left: 255px; top: 355px;" />
+    <ui:VisualElement style="left: 909px; top: 820px; background-image: resource(&apos;MainScreen/MS_state1&apos;); position: absolute; background-color: rgba(116, 116, 116, 0); opacity: 1; width: 37px; height: 18px;" />
+    <ui:VisualElement style="position: absolute; left: 984px; top: 820px; background-image: resource(&apos;MainScreen/MS_state0&apos;); width: 18px; height: 18px; background-color: rgba(255, 255, 255, 0);" />
+    <ui:Button display-tooltip-when-elided="true" style="background-image: resource(&apos;MainScreen/MS_button1&apos;); width: 632px; height: 182px; background-color: rgba(91, 91, 91, 0); left: 1087px; top: 866px; position: absolute;" />
+    <ui:Button display-tooltip-when-elided="true" enable-rich-text="false" style="background-image: resource(&apos;MainScreen/MS_button2&apos;); width: 632px; height: 182px; background-color: rgba(88, 88, 88, 0); position: absolute; top: 866px; left: 223px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+</ui:UXML>
