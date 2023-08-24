@@ -233,6 +233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 181000204}
   - component: {fileID: 181000205}
+  - component: {fileID: 181000206}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -274,6 +275,21 @@ MonoBehaviour:
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: dc1e13f7efc48bd4abc8b25eef0c9f74, type: 3}
   m_SortingOrder: 0
+--- !u!114 &181000206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181000203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96bb70652a965c24288b7425ee26e40f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MainModalScreen: {fileID: 0}
+  m_ProcessModalScreen: {fileID: 0}
+  m_SmartCityModalScreen: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,8 +621,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1935773543}
+  - component: {fileID: 1935773544}
   m_Layer: 0
-  m_Name: Timer
+  m_Name: TimeManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -627,6 +644,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1935773544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935773542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f97fceda37ac1248b673a6eed6026cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  isStart: 0
+  UI_manager: {fileID: 0}
+  PS_screen: {fileID: 0}
+  SCS_screen: {fileID: 0}
+  M_Screen: {fileID: 0}
 --- !u!1 &2073987293
 GameObject:
   m_ObjectHideFlags: 0
