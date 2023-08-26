@@ -1,0 +1,14 @@
+.scrim {
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-color: rgba(0, 0, 0, 0.59);
+    transition-duration: 1s;
+}
+
+.scrim--fadein {
+    opacity: 1;
+    transition-duration: 1s;
+}

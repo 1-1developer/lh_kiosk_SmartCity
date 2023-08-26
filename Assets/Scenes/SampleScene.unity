@@ -214,7 +214,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 181000204}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -248,16 +249,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181000203}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.88340974, y: 0.0010368659, z: 0.004500015}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960.8834, y: -539.99896, z: 0.004500015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1321101924}
   - {fileID: 601832941}
   - {fileID: 1547338675}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 175372867}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &181000205
 MonoBehaviour:
@@ -287,9 +288,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96bb70652a965c24288b7425ee26e40f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MainModalScreen: {fileID: 0}
-  m_ProcessModalScreen: {fileID: 0}
-  m_SmartCityModalScreen: {fileID: 0}
+  m_MainModalScreen: {fileID: 1321101925}
+  m_ProcessModalScreen: {fileID: 601832942}
+  m_SmartCityModalScreen: {fileID: 1547338676}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 601832941}
+  - component: {fileID: 601832942}
   m_Layer: 0
   m_Name: ProcessScreen
   m_TagString: Untagged
@@ -405,6 +407,21 @@ Transform:
   m_Father: {fileID: 181000204}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &601832942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601832940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf26ed04fda09f478a4b384fb797f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ScreenName: ProcessScreen
+  m_MainMenuUIManager: {fileID: 181000206}
+  m_Document: {fileID: 181000205}
 --- !u!1 &681290294
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +515,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -535,7 +552,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1102415661
 MonoBehaviour:
@@ -559,6 +576,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1321101924}
+  - component: {fileID: 1321101925}
   m_Layer: 0
   m_Name: MainScreen
   m_TagString: Untagged
@@ -581,6 +599,22 @@ Transform:
   m_Father: {fileID: 181000204}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1321101925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321101923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 732a2992666cbc24db69d9d4d6553fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ScreenName: MainScreen
+  m_MainMenuUIManager: {fileID: 181000206}
+  m_Document: {fileID: 181000205}
+  Timer: {fileID: 1935773544}
 --- !u!1 &1547338674
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +624,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1547338675}
+  - component: {fileID: 1547338676}
   m_Layer: 0
   m_Name: SmartCityScreen
   m_TagString: Untagged
@@ -612,6 +647,21 @@ Transform:
   m_Father: {fileID: 181000204}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1547338676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547338674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf7be93646871242981267047730f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ScreenName: SmartCityScreen
+  m_MainMenuUIManager: {fileID: 181000206}
+  m_Document: {fileID: 181000205}
 --- !u!1 &1935773542
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,7 +692,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1935773544
 MonoBehaviour:
@@ -658,10 +708,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   isStart: 0
-  UI_manager: {fileID: 0}
-  PS_screen: {fileID: 0}
-  SCS_screen: {fileID: 0}
-  M_Screen: {fileID: 0}
+  UI_manager: {fileID: 181000206}
+  PS_screen: {fileID: 601832942}
+  SCS_screen: {fileID: 1547338676}
+  M_Screen: {fileID: 1321101925}
 --- !u!1 &2073987293
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,5 +778,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
