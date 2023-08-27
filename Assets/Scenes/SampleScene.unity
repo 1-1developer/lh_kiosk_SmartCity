@@ -422,6 +422,21 @@ MonoBehaviour:
   m_ScreenName: ProcessScreen
   m_MainMenuUIManager: {fileID: 181000206}
   m_Document: {fileID: 181000205}
+  PS_PopContents:
+  - {fileID: 21300000, guid: 3467679484e9bea4ca4bebc505d91714, type: 3}
+  - {fileID: 21300000, guid: 0157f1ab95ca4a240a935135c7013b56, type: 3}
+  - {fileID: 21300000, guid: 995f0b709f3183545a30e8a5e3251f65, type: 3}
+  - {fileID: 21300000, guid: 47bbbd90012219943820cd461e411b06, type: 3}
+  - {fileID: 21300000, guid: 13a4a10a96678054a966c4fc7e8b6510, type: 3}
+  - {fileID: 21300000, guid: c425e7f1ed1988048a3f32b30e7440f0, type: 3}
+  - {fileID: 21300000, guid: bfb9bbb104718554b8a0706652f113c7, type: 3}
+  - {fileID: 21300000, guid: b3b1ab362a852564eb11a6a068258e47, type: 3}
+  - {fileID: 21300000, guid: 161ddbcb554977e4a947ee913189f281, type: 3}
+  - {fileID: 21300000, guid: 8b9495c9133f9ba4fa62382a8e276305, type: 3}
+  - {fileID: 21300000, guid: 77949cb1b7e7b664e8ace7b4e469a8a0, type: 3}
+  - {fileID: 21300000, guid: 96522fdade1e6ba4c9297e5d09c392b2, type: 3}
+  - {fileID: 21300000, guid: dcda525ca5533b9418f665820bc14b21, type: 3}
+  - {fileID: 21300000, guid: 4868db8613846db4daf0113a073bf644, type: 3}
 --- !u!1 &681290294
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,6 +677,16 @@ MonoBehaviour:
   m_ScreenName: SmartCityScreen
   m_MainMenuUIManager: {fileID: 181000206}
   m_Document: {fileID: 181000205}
+  SCS_PopContents:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1935773542
 GameObject:
   m_ObjectHideFlags: 0

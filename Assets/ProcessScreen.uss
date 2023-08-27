@@ -1,0 +1,10 @@
+.Part_Button {
+    background-image: resource('ProcessScreen/PS_Button2_Popup1');
+    width: 385px;
+    height: 55px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgba(56, 56, 56, 0);
+}

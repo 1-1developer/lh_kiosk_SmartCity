@@ -10,7 +10,8 @@ public class SmartCityScreen : MenuScreen
     const string SCS_BUTTON_BACK = "SCS_Button_Back";
     const string SCS_GROUP_POPUP = "SCS_Group_Popup";
 
-    
+    public Sprite[] SCS_PopContents;
+
     VisualElement m_SCS_Group_Popup;
     Button m_SCS_Button_Back;
     List<Button> m_SCS_Buttons = new List<Button>();
