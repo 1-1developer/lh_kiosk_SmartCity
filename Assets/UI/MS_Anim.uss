@@ -9,17 +9,11 @@
     transition-duration: 0.5s;
 }
 
-.popup-state1 {
-    width: 18px;
-    height: 18px;
-    border-left-color: rgb(217, 217, 217);
-    border-right-color: rgb(217, 217, 217);
-    border-top-color: rgb(217, 217, 217);
-    border-bottom-color: rgb(217, 217, 217);
+.popup--state1 {
     background-color: rgb(217, 217, 217);
+    scale: 0.5 1;
     border-top-left-radius: 18px;
     border-bottom-left-radius: 18px;
     border-top-right-radius: 18px;
     border-bottom-right-radius: 18px;
-    display: flex;
 }
