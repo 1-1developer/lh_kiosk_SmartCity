@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     public UIDocument MainMenuDocument => m_MainMenuDocument;
     List<MenuScreen> m_AllModalScreens = new List<MenuScreen>();
 
+
     void SetupModalScreens()
     {
         if (m_MainModalScreen != null)
@@ -45,6 +46,7 @@ public class UIManager : MonoBehaviour
         m_MainMenuDocument = GetComponent<UIDocument>();
         SetupModalScreens();
         ShowMainScreen();
+
     }
     public void ShowMainScreen()
     {
@@ -58,6 +60,5 @@ public class UIManager : MonoBehaviour
     {
         ShowModalScreen(m_SmartCityModalScreen);
     }
-
 
 }

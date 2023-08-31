@@ -6,7 +6,10 @@ using UnityEngine.UIElements;
 
 public class ProcessScreen : MenuScreen
 {
+    
     const string PS_BUTTON = "PS_Button";
+    const string PS_BUTTON_BACK = "PS_Button_Back";
+    const string PS_ONBUTTON = "PS_OnButton";
     const string PS_POPUP_BUTTON = "PS_Popup_Button";
     const string GROUP_PART = "Group_Part";
     const string SCRIM_TOUCH = "Scrim_Touch";
@@ -14,17 +17,22 @@ public class ProcessScreen : MenuScreen
     const string PS_POPUP_WINDOW = "PS_Popup_Window";
     const string PS_BUTTON_X = "PS_Button_X";
 
+
     public Sprite[] PS_PopContents;
 
     List<Button> m_PS_Buttons = new List<Button>();
+    List<Button> m_PS_OnButtons = new List<Button>();
     List<Button> m_PS_Popup_Buttons = new List<Button>();
     List<VisualElement> m_Group_Parts = new List<VisualElement>();
 
+    
     VisualElement m_PS_Popup;
     VisualElement m_PS_Popup_Window;
 
-    Button m_Scrim_Touch;
+    //Button m_Scrim_Touch;
     Button m_PS_Button_X;
+    Button m_PS_Button_Back;
+
 
     protected override void SetVisualElements()
     {
@@ -34,30 +42,31 @@ public class ProcessScreen : MenuScreen
         {
             m_PS_Buttons.Add(m_Root.Q<Button>(PS_BUTTON + $"{i}"));
         }
-
-        for (int i = 0; i < 14; i++)
+        for (int i = 1; i < 7; i++)
         {
-            m_PS_Popup_Buttons.Add(m_Root.Q<Button>(PS_POPUP_BUTTON + $"{i}"));
+            m_PS_OnButtons.Add(m_Root.Q<Button>(PS_ONBUTTON + $"{i}"));
         }
-
         for (int i = 0; i < 6; i++)
         {
             m_Group_Parts.Add(m_Root.Q<VisualElement>(GROUP_PART + $"{i}"));
         }
-
+        for (int i = 0; i < 14; i++)
+        {
+            m_PS_Popup_Buttons.Add(m_Root.Q<Button>(PS_POPUP_BUTTON + $"{i}"));
+        }
+                      
         m_PS_Popup = m_Root.Q<VisualElement>(PS_POPUP);
         m_PS_Popup_Window = m_Root.Q<VisualElement>(PS_POPUP_WINDOW);
-        m_Scrim_Touch = m_Root.Q<Button>(SCRIM_TOUCH);
+        //m_Scrim_Touch = m_Root.Q<Button>(SCRIM_TOUCH);
         m_PS_Button_X = m_Root.Q<Button>(PS_BUTTON_X);
-        
-
+        m_PS_Button_Back = m_Root.Q<Button>(PS_BUTTON_BACK);
     }
     protected override void RegisterButtonCallbacks()
     {
         base.RegisterButtonCallbacks();
 
         m_PS_Buttons[0].RegisterCallback<ClickEvent>(OnBackBt);
-
+        
         m_PS_Buttons[1].RegisterCallback<ClickEvent>(evt => OnPopupSelection(0));
         m_PS_Buttons[2].RegisterCallback<ClickEvent>(evt => OnPopupSelection(1));
         m_PS_Buttons[3].RegisterCallback<ClickEvent>(evt => OnPopupSelection(2));
@@ -65,7 +74,7 @@ public class ProcessScreen : MenuScreen
         m_PS_Buttons[5].RegisterCallback<ClickEvent>(evt => OnPopupSelection(4));
         m_PS_Buttons[6].RegisterCallback<ClickEvent>(evt => OnPopupSelection(5));
 
-        m_Scrim_Touch.RegisterCallback<ClickEvent>(OffPopupSelection);
+        m_PS_Button_Back.RegisterCallback<ClickEvent>(OffPopupSelection);
 
         m_PS_Popup_Buttons[0].RegisterCallback<ClickEvent>(evt => OnPopupWindow(0));
         m_PS_Popup_Buttons[1].RegisterCallback<ClickEvent>(evt => OnPopupWindow(1));
@@ -89,20 +98,38 @@ public class ProcessScreen : MenuScreen
     {
         AudioManager.PlayDefaultButtonSound();
         m_MainMenuUIManager.ShowMainScreen();
-        //Debug.Log("asahd");
     }
 
     private void OnPopupSelection(int v)
     {
         AudioManager.PlayDefaultButtonSound();
         m_Group_Parts[v].style.display = DisplayStyle.Flex;
-        m_Scrim_Touch.style.display = DisplayStyle.Flex;
+        m_PS_OnButtons[v].style.display = DisplayStyle.Flex;
+        m_PS_Button_Back.style.display = DisplayStyle.Flex;
+
+        for (int i = 0; i < 6; i++)
+        {
+            if (i == v)
+            {
+                continue;
+            }
+            else
+            {
+                m_PS_Buttons[i + 1].AddToClassList("animButton--on");
+                if (m_Group_Parts[i].style.display == DisplayStyle.Flex)
+                {
+                    m_Group_Parts[i].style.display = DisplayStyle.None;
+                    m_PS_OnButtons[i].style.display = DisplayStyle.None;
+                }
+            }
+        }
+
     }
 
     private void OffPopupSelection(ClickEvent evt)
     {
         AudioManager.PlayDefaultButtonSound();
-        m_Scrim_Touch.style.display = DisplayStyle.None;
+        m_PS_Button_Back.style.display = DisplayStyle.None;
 
         for (int i = 0; i < 6; i++)
         {
@@ -110,6 +137,11 @@ public class ProcessScreen : MenuScreen
             {
                 m_Group_Parts[i].style.display = DisplayStyle.None;
             }
+            m_PS_OnButtons[i].style.display = DisplayStyle.None;
+        }
+        for (int i = 1; i < 7; i++)
+        {
+            m_PS_Buttons[i].RemoveFromClassList("animButton--on");
         }
     }
 
@@ -118,11 +150,17 @@ public class ProcessScreen : MenuScreen
         AudioManager.PlayDefaultButtonSound();
         m_PS_Popup_Window.style.backgroundImage = PS_PopContents[v].texture;
         m_PS_Popup.style.display = DisplayStyle.Flex;
+
+        //애니메이션
+        m_PS_Popup.AddToClassList("popup--fadein");
     }
 
     private void OffPopupWindow(ClickEvent evt)
     {
         AudioManager.PlayDefaultButtonSound();
         m_PS_Popup.style.display = DisplayStyle.None;
+
+        //애니메이션
+        m_PS_Popup.RemoveFromClassList("popup--fadein");
     }
 }

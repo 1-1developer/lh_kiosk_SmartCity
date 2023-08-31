@@ -36,9 +36,9 @@ public class TimeManager : MonoBehaviour
         }
         if (isStart && timer > MaxTime)
         {
-            //UI_manager.ShowHomeScreen();
+            UI_manager.ShowMainScreen();
             //SCS_screen.initNav();
-            //M_Screen.initHome();
+            //PS_screen.initHome();
             AudioManager.StopSound();
             isStart = false;
             timer = 0;

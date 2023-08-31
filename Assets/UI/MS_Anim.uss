@@ -1,6 +1,6 @@
 .popup-state0 {
     height: 18px;
-    background-color: rgb(172, 211, 214);
+    background-color: rgb(187, 211, 14);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -16,4 +16,34 @@
     border-bottom-left-radius: 18px;
     border-top-right-radius: 18px;
     border-bottom-right-radius: 18px;
+}
+
+.popup1 {
+    background-image: resource('MainScreen/MS_Popup_Content1');
+    width: 803px;
+    height: 365px;
+    left: 559px;
+    top: 380px;
+    position: absolute;
+    transition-duration: 0.5s;
+}
+
+.popup1--off {
+    opacity: 0;
+}
+
+.popup2 {
+    position: absolute;
+    left: 446px;
+    top: 380px;
+    width: 1029px;
+    height: 392px;
+    display: flex;
+    background-image: resource('MainScreen/MS_Popup_Content2');
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+.popup2--on {
+    opacity: 1;
 }
