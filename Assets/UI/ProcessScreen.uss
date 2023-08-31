@@ -52,3 +52,45 @@
 .popup--fadein {
     opacity: 1;
 }
+
+.animButton--big {
+    background-image: resource('ProcessScreen/Button1');
+    width: 134px;
+    height: 144px;
+    position: absolute;
+    background-color: rgba(188, 188, 188, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    left: 537px;
+    top: 16px;
+    scale: 1.2 1.2;
+}
+
+.group {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: absolute;
+    display: flex;
+    transition-duration: 0.8s;
+    opacity: 0;
+}
+
+.group--fadein {
+    opacity: 1;
+}

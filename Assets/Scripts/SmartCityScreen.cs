@@ -238,4 +238,23 @@ public class SmartCityScreen : MenuScreen
             page_num += 1;
         }
     }
+
+    public void InitSmartCityScreen()
+    {
+      
+        m_SCS_Button_Back.style.display = DisplayStyle.None;    
+
+        for (int i = 0; i < 9; i++)
+        {
+            m_SCS_Buttons[i + 1].RemoveFromClassList("buttonAnim--on");
+            m_SCS_txt_Buttons[i].RemoveFromClassList("buttonAnim--on");
+            m_SCS_Buttons[i + 1].RemoveFromClassList("buttonAnim--big");
+        }
+
+        m_SCS_Popup.style.display = DisplayStyle.None;
+        m_SCS_Popup.RemoveFromClassList("popup--fadein");
+
+        m_SCS_Popup_Entire.style.display = DisplayStyle.None;
+        m_SCS_Popup_Entire.RemoveFromClassList("popup--fadein");
+    }
 }

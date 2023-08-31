@@ -85,6 +85,7 @@ public class MainScreen : MenuScreen
     private void OnMainBt(int v)
     {
         AudioManager.PlayDefaultButtonSound();
+        Timer.isStart = true;
         if (v == 0)
         {
             m_MainMenuUIManager.ShowProcessScreen();

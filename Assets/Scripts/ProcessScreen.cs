@@ -29,7 +29,6 @@ public class ProcessScreen : MenuScreen
     VisualElement m_PS_Popup;
     VisualElement m_PS_Popup_Window;
 
-    //Button m_Scrim_Touch;
     Button m_PS_Button_X;
     Button m_PS_Button_Back;
 
@@ -57,7 +56,6 @@ public class ProcessScreen : MenuScreen
                       
         m_PS_Popup = m_Root.Q<VisualElement>(PS_POPUP);
         m_PS_Popup_Window = m_Root.Q<VisualElement>(PS_POPUP_WINDOW);
-        //m_Scrim_Touch = m_Root.Q<Button>(SCRIM_TOUCH);
         m_PS_Button_X = m_Root.Q<Button>(PS_BUTTON_X);
         m_PS_Button_Back = m_Root.Q<Button>(PS_BUTTON_BACK);
     }
@@ -104,6 +102,9 @@ public class ProcessScreen : MenuScreen
     {
         AudioManager.PlayDefaultButtonSound();
         m_Group_Parts[v].style.display = DisplayStyle.Flex;
+        //m_Group_Parts[v].AddToClassList("group--fadein");
+        //m_PS_Buttons[v + 1].AddToClassList("animButton--big");
+        m_PS_Buttons[v + 1].RemoveFromClassList("animButton--on");
         m_PS_OnButtons[v].style.display = DisplayStyle.Flex;
         m_PS_Button_Back.style.display = DisplayStyle.Flex;
 
@@ -118,7 +119,10 @@ public class ProcessScreen : MenuScreen
                 m_PS_Buttons[i + 1].AddToClassList("animButton--on");
                 if (m_Group_Parts[i].style.display == DisplayStyle.Flex)
                 {
+                    //m_PS_Buttons[i + 1].RemoveFromClassList("animButton--big");
+                    
                     m_Group_Parts[i].style.display = DisplayStyle.None;
+                    //m_Group_Parts[i].RemoveFromClassList("group--fadein");
                     m_PS_OnButtons[i].style.display = DisplayStyle.None;
                 }
             }
@@ -142,6 +146,7 @@ public class ProcessScreen : MenuScreen
         for (int i = 1; i < 7; i++)
         {
             m_PS_Buttons[i].RemoveFromClassList("animButton--on");
+            //m_PS_Buttons[i].RemoveFromClassList("animButton--big");
         }
     }
 
@@ -162,5 +167,21 @@ public class ProcessScreen : MenuScreen
 
         //애니메이션
         m_PS_Popup.RemoveFromClassList("popup--fadein");
+    }
+
+    public void InitProcessScreen()
+    {
+        m_PS_Button_Back.style.display = DisplayStyle.None;
+
+        for (int i = 0; i < 6; i++)
+        {
+            m_Group_Parts[i].style.display = DisplayStyle.None;         
+            m_PS_OnButtons[i].style.display = DisplayStyle.None;
+            m_PS_Buttons[i + 1].RemoveFromClassList("animButton--on");
+        }
+
+        m_PS_Popup.style.display = DisplayStyle.None;
+        m_PS_Popup.RemoveFromClassList("popup--fadein");
+
     }
 }

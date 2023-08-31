@@ -37,8 +37,8 @@ public class TimeManager : MonoBehaviour
         if (isStart && timer > MaxTime)
         {
             UI_manager.ShowMainScreen();
-            //SCS_screen.initNav();
-            //PS_screen.initHome();
+            SCS_screen.InitSmartCityScreen();
+            PS_screen.InitProcessScreen();
             AudioManager.StopSound();
             isStart = false;
             timer = 0;
