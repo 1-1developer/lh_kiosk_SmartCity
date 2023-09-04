@@ -17,7 +17,7 @@ public class ProcessScreen : MenuScreen
     const string PS_POPUP_WINDOW = "PS_Popup_Window";
     const string PS_POPUP_WINDOW2 = "PS_Popup_Window2";
     const string PS_BUTTON_X = "PS_Button_X";
-    const string PS_BUTTON_X = "PS_Button_X2";
+    const string PS_BUTTON_X2 = "PS_Button_X2";
 
 
     public Sprite[] PS_PopContents;
@@ -161,16 +161,21 @@ public class ProcessScreen : MenuScreen
     {
         AudioManager.PlayDefaultButtonSound();
 
+        m_PS_Popup.style.display = DisplayStyle.Flex;
+
         if (v == 12)
         {
-            m_PS_Popup.style.display = DisplayStyle.Flex;
             m_PS_Popup_Window2.style.display = DisplayStyle.Flex;
             m_PS_Popup_Window.style.display = DisplayStyle.None;
         }
         else
         {
+            if (m_PS_Popup_Window2.style.display == DisplayStyle.Flex)
+            {
+                m_PS_Popup_Window2.style.display = DisplayStyle.None;
+                m_PS_Popup_Window.style.display = DisplayStyle.Flex;
+            }
             m_PS_Popup_Window.style.backgroundImage = PS_PopContents[v].texture;
-            m_PS_Popup.style.display = DisplayStyle.Flex;
         }
 
         //애니메이션
@@ -179,18 +184,14 @@ public class ProcessScreen : MenuScreen
 
     private void OffPopupWindow(ClickEvent evt)
     {
-        AudioManager.PlayDefaultButtonSound();
-
-        if (m_PS_Popup_Window2.style.display == DisplayStyle.Flex)
-        {
-            m_PS_Popup_Window2.style.display = DisplayStyle.None;
-            m_PS_Popup_Window.style.display = DisplayStyle.Flex;
-        }
+        AudioManager.PlayDefaultButtonSound(); 
 
         m_PS_Popup.style.display = DisplayStyle.None;
 
         //애니메이션
         m_PS_Popup.RemoveFromClassList("popup--fadein");
+
+
     }
 
     public void InitProcessScreen()

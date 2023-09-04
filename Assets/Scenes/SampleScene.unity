@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videos:
-  - {fileID: 32900000, guid: e2891289d1b44a7448367d1679326eff, type: 3}
+  - {fileID: 32900000, guid: ba8575e32789342429aad4e1c1ee4a90, type: 3}
   - {fileID: 32900000, guid: 670ce1da532090747933843458db2b1f, type: 3}
 --- !u!4 &83955405
 Transform:
@@ -517,9 +517,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 161ddbcb554977e4a947ee913189f281, type: 3}
   - {fileID: 21300000, guid: 8b9495c9133f9ba4fa62382a8e276305, type: 3}
   - {fileID: 21300000, guid: 77949cb1b7e7b664e8ace7b4e469a8a0, type: 3}
-  - {fileID: 21300000, guid: b393c25c19a0e964ba6266578a009075, type: 3}
-  - {fileID: 21300000, guid: 9004d2e9eb9bf454ea4d5ae54436b2d3, type: 3}
-  - {fileID: 21300000, guid: c8a8ebdf3c471504292589817ec19b47, type: 3}
+  - {fileID: 21300000, guid: e157960368b6f124381e9b2b0a86cb32, type: 3}
+  - {fileID: 21300000, guid: 90c2b28410076854299b4a0ea433bce5, type: 3}
+  - {fileID: 21300000, guid: 997571bb635ddd54db0f38ccbdae210c, type: 3}
 --- !u!1 &1102415659
 GameObject:
   m_ObjectHideFlags: 0
