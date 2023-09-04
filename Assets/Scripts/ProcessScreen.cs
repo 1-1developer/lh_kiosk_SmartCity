@@ -15,7 +15,9 @@ public class ProcessScreen : MenuScreen
     const string SCRIM_TOUCH = "Scrim_Touch";
     const string PS_POPUP = "PS_Popup";
     const string PS_POPUP_WINDOW = "PS_Popup_Window";
+    const string PS_POPUP_WINDOW2 = "PS_Popup_Window2";
     const string PS_BUTTON_X = "PS_Button_X";
+    const string PS_BUTTON_X = "PS_Button_X2";
 
 
     public Sprite[] PS_PopContents;
@@ -28,8 +30,10 @@ public class ProcessScreen : MenuScreen
     
     VisualElement m_PS_Popup;
     VisualElement m_PS_Popup_Window;
+    VisualElement m_PS_Popup_Window2;
 
     Button m_PS_Button_X;
+    Button m_PS_Button_X2;
     Button m_PS_Button_Back;
 
 
@@ -56,7 +60,9 @@ public class ProcessScreen : MenuScreen
                       
         m_PS_Popup = m_Root.Q<VisualElement>(PS_POPUP);
         m_PS_Popup_Window = m_Root.Q<VisualElement>(PS_POPUP_WINDOW);
+        m_PS_Popup_Window2 = m_Root.Q<VisualElement>(PS_POPUP_WINDOW2);
         m_PS_Button_X = m_Root.Q<Button>(PS_BUTTON_X);
+        m_PS_Button_X2 = m_Root.Q<Button>(PS_BUTTON_X2);
         m_PS_Button_Back = m_Root.Q<Button>(PS_BUTTON_BACK);
     }
     protected override void RegisterButtonCallbacks()
@@ -90,6 +96,7 @@ public class ProcessScreen : MenuScreen
         m_PS_Popup_Buttons[13].RegisterCallback<ClickEvent>(evt => OnPopupWindow(13));
 
         m_PS_Button_X.RegisterCallback<ClickEvent>(OffPopupWindow);
+        m_PS_Button_X2.RegisterCallback<ClickEvent>(OffPopupWindow);
 
     }
     private void OnBackBt(ClickEvent evt)
@@ -153,8 +160,18 @@ public class ProcessScreen : MenuScreen
     private void OnPopupWindow(int v)
     {
         AudioManager.PlayDefaultButtonSound();
-        m_PS_Popup_Window.style.backgroundImage = PS_PopContents[v].texture;
-        m_PS_Popup.style.display = DisplayStyle.Flex;
+
+        if (v == 12)
+        {
+            m_PS_Popup.style.display = DisplayStyle.Flex;
+            m_PS_Popup_Window2.style.display = DisplayStyle.Flex;
+            m_PS_Popup_Window.style.display = DisplayStyle.None;
+        }
+        else
+        {
+            m_PS_Popup_Window.style.backgroundImage = PS_PopContents[v].texture;
+            m_PS_Popup.style.display = DisplayStyle.Flex;
+        }
 
         //애니메이션
         m_PS_Popup.AddToClassList("popup--fadein");
@@ -163,6 +180,13 @@ public class ProcessScreen : MenuScreen
     private void OffPopupWindow(ClickEvent evt)
     {
         AudioManager.PlayDefaultButtonSound();
+
+        if (m_PS_Popup_Window2.style.display == DisplayStyle.Flex)
+        {
+            m_PS_Popup_Window2.style.display = DisplayStyle.None;
+            m_PS_Popup_Window.style.display = DisplayStyle.Flex;
+        }
+
         m_PS_Popup.style.display = DisplayStyle.None;
 
         //애니메이션

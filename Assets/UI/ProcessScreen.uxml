@@ -54,8 +54,12 @@
         </ui:VisualElement>
         <ui:VisualElement name="PS_Popup" class="popup" style="display: none;">
             <ui:VisualElement name="PS_Scrim" style="position: absolute; background-color: rgba(0, 0, 0, 0.55); width: 1920px; height: 1080px;" />
-            <ui:VisualElement name="PS_Popup_Window" style="position: absolute; background-color: rgba(255, 255, 255, 0); width: 727px; height: 768px; left: 597px; top: 156px;" />
-            <ui:Button display-tooltip-when-elided="true" name="PS_Button_X" style="position: absolute; width: 40px; height: 40px; background-image: resource(&apos;ProcessScreen/PS_X&apos;); background-color: rgba(0, 0, 0, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; left: 1260px; top: 182px;" />
+            <ui:VisualElement name="PS_Popup_Window" style="position: absolute; background-color: rgba(255, 255, 255, 0); width: 727px; height: 768px; left: 597px; top: 156px;">
+                <ui:Button display-tooltip-when-elided="true" name="PS_Button_X" style="position: absolute; width: 40px; height: 40px; background-image: resource(&apos;ProcessScreen/PS_X&apos;); background-color: rgba(0, 0, 0, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; left: 663px; top: 26px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="PS_Popup_Window2" style="width: 1390px; height: 768px; position: absolute; left: 265px; background-image: resource(&apos;ProcessScreen/Slide 4_3 - 3&apos;); top: 156px; opacity: 1; display: none;">
+                <ui:Button display-tooltip-when-elided="true" name="PS_Button_X2" style="position: absolute; width: 40px; height: 40px; background-image: resource(&apos;ProcessScreen/PS_X&apos;); background-color: rgba(0, 0, 0, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; left: 1326px; top: 26px;" />
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
