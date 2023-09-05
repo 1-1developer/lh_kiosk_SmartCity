@@ -80,7 +80,7 @@ public class MainScreen : MenuScreen
         m_MS_State0.RegisterCallback<TransitionEndEvent>(evt => m_MS_State0.ToggleInClassList("popup--state1"));
         m_MS_State1.ToggleInClassList("popup--state1");
         m_MS_State1.RegisterCallback<TransitionEndEvent>(evt => m_MS_State0.ToggleInClassList("popup--state1"));
-    }     
+    }
 
     private void OnMainBt(int v)
     {
@@ -88,16 +88,29 @@ public class MainScreen : MenuScreen
         Timer.isStart = true;
         if (v == 0)
         {
-            m_MainMenuUIManager.ShowProcessScreen();
+            videoManager.rtRelease();
             videoManager.PrepareClip(v);
             videoManager.PlayVideo();
+            Invoke("delayProcessScreen", 0.5f);
         }
         else
         {
-            m_MainMenuUIManager.ShowSmartCityScreen();
+            videoManager.rtRelease();
             videoManager.PrepareClip(v);
             videoManager.PlayVideo();
+            Invoke("delaySmartCityScreen", 0.5f);
+
         }
     }
-    
+
+
+    void delayProcessScreen()
+    {
+        m_MainMenuUIManager.ShowProcessScreen();
+    }
+    void delaySmartCityScreen()
+    {
+        m_MainMenuUIManager.ShowSmartCityScreen();
+    }
+
 }

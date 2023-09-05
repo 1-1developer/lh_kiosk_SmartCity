@@ -8,6 +8,7 @@ public class VideoManager : MonoBehaviour
     public VideoClip[] videos;
 
     VideoPlayer videoPlayer;
+    RenderTexture renderTexture;
     // Start is called before the first frame update
     private void OnEnable()
     {
@@ -26,6 +27,10 @@ public class VideoManager : MonoBehaviour
     public void PlayVideo()
     {
         videoPlayer.Play();
+    }
+    public void rtRelease()
+    {
+        videoPlayer.targetTexture.Release();
     }
 
     public bool isPreparedClip()
